@@ -1,0 +1,40 @@
+{
+    "name": "flyingv/fvauth",
+    "description": "fvauth for flyingv apps",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Far Tseng",
+            "email": "farrrr@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "illuminate/support": "4.0.x"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.7.2",
+        "illuminate/cookie": "4.0.*",
+        "illuminate/database": "4.0.*",
+        "illuminate/session": "4.0.*",
+        "ircmaxell/password-compat": "1.0.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/Flyingv/Fvauth/Groups/Exceptions.php",
+            "src/Flyingv/Fvauth/Throttling/Exceptions.php",
+            "src/Flyingv/Fvauth/Users/Exceptions.php",
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Flyingv\\Fvauth": "src/"
+        }
+    },
+    "extra": {
+        "components": "package",
+        "versions": {
+            "1": "master"
+        }
+    },
+    "minimum-stability": "dev"
+}
