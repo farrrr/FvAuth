@@ -51,7 +51,7 @@ class FvauthServiceProvider extends ServiceProvider {
 
 		$this->registerCookie();
 
-		$this->registerSentry();
+		$this->registerFvauth();
 	}
 
 	protected function registerHasher()
@@ -170,7 +170,7 @@ class FvauthServiceProvider extends ServiceProvider {
 		});
 	}
 
-	protected function registerFlyingv()
+	protected function registerFvauth()
 	{
 		$this->app['fvauth'] = $this->app->share(function($app)
 		{
