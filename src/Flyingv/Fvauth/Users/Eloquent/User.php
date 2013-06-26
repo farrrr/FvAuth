@@ -185,7 +185,7 @@ class User extends Model implements UserInterface {
 			throw new LoginRequiredException("A login is required for a user, none given.");
 		}
 
-		if ( ! $password = $this->getPassword())
+		if ( ! $password = $this->getPassword() and !static::$unguarded)
 		{
 			throw new PasswordRequiredException("A password is required for user [$login], none given.");
 		}
