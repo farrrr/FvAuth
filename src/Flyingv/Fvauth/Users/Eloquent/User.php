@@ -707,6 +707,9 @@ class User extends Model implements UserInterface {
 	 */
 	public function setAttribute($key, $value)
 	{
+        if (static::$unguarded)
+            return parent::setAttribute($key, $value);
+
 		// Hash required fields when necessary
 		if (in_array($key, $this->hashableAttributes) and ! empty($value))
 		{
